@@ -4,10 +4,10 @@ This can be dragged into the System Preferences > Keyboard > Text pane on Mac OS
 Uses julia latex symbols definitions in dictionary latex_symbols.jl
 
 Simon de Szoeke
-adapted from  UnicodeCompletion/latex_symbols.jl 
+adapted from  UnicodeCompletion/latex_symbols.jl
 =#
 
-include(joinpath(JULIA_HOME, "..", "share", "julia", "base", "latex_symbols.jl"));
+include("C:\\Users\\shuvo\\AppData\\Local\\Programs\\Julia-1.6.5\\share\\julia\\stdlib\\v1.6\\REPL\\src\\latex_symbols.jl");
 
 φ = open("LaText Substitutions.plist", "w") # that's \varphi
 
@@ -18,7 +18,7 @@ println(φ, """<plist version="1.0">""")
 println(φ, """<array>""")
 # write each plist dictionary entry
 for (ω, (α, β)) in enumerate(latex_symbols)
-    println(φ, "   <dict>") 
+    println(φ, "   <dict>")
     println(φ, "      <key>phrase</key>")
     println(φ, "      <string>$β</string>")
     println(φ, "      <key>shortcut</key>")
